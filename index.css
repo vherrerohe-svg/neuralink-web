@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #1b1b1b;
+  font-size: 18px;
+  line-height: 1.8;
+  background-color: #f7f9fb;
+}
+
+header {
+  background: url("/imagenes/fondo-neuralink.jpg") center/cover no-repeat;
+  height: 90vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+header .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 5rem;
+  margin: 0;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00b4d8, #48cae4, #90e0ef, #caf0f8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: brillo 5s linear infinite;
+  text-shadow: 0 0 25px rgba(72, 202, 228, 0.3);
+}
+
+header p {
+  font-size: 1.6rem;
+  opacity: 0.95;
+  max-width: 750px;
+  color: #e0f7ff;
+  margin-top: 20px;
+  text-shadow: 0 0 10px rgba(0, 180, 216, 0.4);
+}
+
+@keyframes brillo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+nav {
+  background-color: #0b132b;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav a {
+  color: #f0f4f8;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00b4d8;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+}
+
+.seccion {
+  min-height: 100vh;
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  transition: all 0.4s ease;
+}
+
+.seccion h2 {
+  font-size: 2.7rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.seccion p {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+}
+
+.seccion-azul {
+  background-color: #eaf6ff;
+  color: #0a1128;
+}
+
+.seccion-gris {
+  background-color: #f1f1f1;
+  color: #1b1b1b;
+}
+
+.seccion-oscura {
+  background-color: #1b263b;
+  color: #f4f4f4;
+}
+
+.seccion-celeste {
+  background-color: #d7effa;
+  color: #111;
+}
+
+.img-central {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-central:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.grid-objetivos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.tarjeta {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tech-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  color: inherit;
+}
+
+.tech-box h3 {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  text-align: center;
+}
+
+table th, table td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+table th {
+  background-color: #14213d;
+  color: white;
+}
+
+.resaltado {
+  background-color: #a2d2ff;
+  font-weight: bold;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.beneficio {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+  transform: translateY(-8px);
+}
+
+footer {
+  background-color: #0b132b;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.95rem;
+}
